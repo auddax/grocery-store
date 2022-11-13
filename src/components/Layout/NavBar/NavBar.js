@@ -1,6 +1,6 @@
 import styles from './NavBar.module.css';
 import logoImage from '../../../assets/img/logo.png'
-import SearchForm from '../SearchForm/SearchForm';
+import SearchForm from '../../Filters/SearchForm/SearchForm';
 import { Heart, Cart } from 'react-bootstrap-icons';
 
 const NavBar = () => {
