@@ -1,4 +1,4 @@
-import { makeAutoObservable } from 'mobx';
+import { makeAutoObservable, runInAction } from 'mobx';
 import productsApi from '../api/api';
 
 class ProductStore {
@@ -12,7 +12,9 @@ class ProductStore {
 
   async getProducts() {
     const data = await productsApi();
-    this.products = data.values;
+    runInAction(() => {
+      this.products = data.values;
+    });
   }
 
 }

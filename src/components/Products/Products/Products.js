@@ -1,9 +1,9 @@
 import ProductsList from '../ProductsList/ProductsList';
-import './Products.module.css';
+import styles from './Products.module.css';
 
 const Products = () => {
   return(
-    <section>
+    <section className={styles['products']}>
       <ProductsList />
     </section>
   )
